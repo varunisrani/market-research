@@ -12,6 +12,7 @@ import MetaSearchAgent, {
   MetaSearchAgentType,
 } from '../search/metaSearchAgent';
 import prompts from '../prompts';
+import marketResearchAgent from '../search/marketResearchAgent';
 
 type Message = {
   messageId: string;
@@ -83,6 +84,7 @@ export const searchHandlers = {
     searchWeb: true,
     summarizer: false,
   }),
+  marketResearch: marketResearchAgent,
 };
 
 const handleEmitterEvents = (
